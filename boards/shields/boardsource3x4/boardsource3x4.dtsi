@@ -1,8 +1,6 @@
 / {
-    matrix {
-        compatible = "zmk,matrix-transform";
-        rows = <3>;
-        columns = <4>;
+    kscan0: kscan {
+        compatible = "zmk,kscan-gpio-matrix";
         row-gpios = <&gpio0 17 GPIO_ACTIVE_LOW>,
                     <&gpio0 22 GPIO_ACTIVE_LOW>,
                     <&gpio0 24 GPIO_ACTIVE_LOW>;
@@ -10,5 +8,6 @@
                     <&gpio1 4 GPIO_ACTIVE_LOW>,
                     <&gpio1 6 GPIO_ACTIVE_LOW>,
                     <&gpio1 15 GPIO_ACTIVE_LOW>;
+        debounce-period-ms = <5>;
     };
 };
