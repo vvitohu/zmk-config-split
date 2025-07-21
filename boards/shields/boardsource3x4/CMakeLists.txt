@@ -1,1 +1,0 @@
-zephyr_include_directories(shields/boardsource3x4)
