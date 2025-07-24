@@ -13,7 +13,7 @@
         AutoCAD_Line: AutoCAD {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp L &kp RET>, <&macro_tap>;
+            bindings = <&macro_tap>, <&kp ESC &kp L &kp RET>;
 
             label = "AUTOCAD";
         };
@@ -21,9 +21,42 @@
         AutoCAD_Circle: AutoCAD_Circle {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp C &kp RET>, <&macro_tap>;
+            bindings = <&kp ESC &kp C &kp RET>, <&macro_tap>;
 
             label = "AUTOCAD_CIRCLE";
+        };
+
+        ScreenCapture: ScreenCapture {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kt LS(LG(S)) &kt ESC>, <&macro_press>;
+
+            label = "SCREENCAPTURE";
+        };
+
+        AutoCAD_Rectang: AutoCAD_Rectang {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp ESC &kp R &kp E &kp C &kp RET>, <&macro_tap>;
+
+            label = "AUTOCAD_RECTANG";
+        };
+    };
+
+    combos {
+        compatible = "zmk,combos";
+
+        AutoCAD {
+            bindings = <&to 1>;
+            key-positions = <8 3>;
+        };
+    };
+
+    behaviors {
+        new_behavior: new_behavior {
+            compatible = "zmk,behavior-key-toggle";
+            label = "NEW_BEHAVIOR";
+            #binding-cells = <1>;
         };
     };
 
@@ -32,7 +65,7 @@
 
         default_layer {
             bindings = <
-&kp LG(LS(S))  &kp C_VOL_UP  &kp K_NEXT  &to 1
+&kt LG(LS(S))  &kp C_VOL_UP  &kp K_NEXT  &to 1
 &kp LG(X)      &kp C_VOL_DN  &kp C_PP    &kp LG(D)
 &kp F11        &kp C_MUTE    &kp K_PREV  &kp LG(A)
             >;
@@ -40,15 +73,15 @@
 
         AutoCAD {
             bindings = <
-&trans           &trans  &trans  &to 2
-&AutoCAD_Circle  &trans  &trans  &trans
-&AutoCAD_Line    &trans  &trans  &to 0
+&AutoCAD_Rectang  &trans  &trans  &to 2
+&AutoCAD_Circle   &trans  &trans  &trans
+&AutoCAD_Line     &trans  &trans  &to 0
             >;
         };
 
         num_layer {
             bindings = <
-&kp N9  &kp N6  &kp N3  &lt 1 ENTER
+&kp N9  &kp N6  &kp N3  &mo 1
 &kp N8  &kp N5  &kp N2  &kp DOT
 &kp N7  &kp N4  &kp N1  &lt 0 N0
             >;
