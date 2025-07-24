@@ -9,6 +9,24 @@
 #include <dt-bindings/zmk/keys.h>
 
 / {
+    macros {
+        AutoCAD_Line: AutoCAD {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp L &kp RET>, <&macro_tap>;
+
+            label = "AUTOCAD";
+        };
+
+        AutoCAD_Circle: AutoCAD_Circle {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp C &kp RET>, <&macro_tap>;
+
+            label = "AUTOCAD_CIRCLE";
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -16,15 +34,15 @@
             bindings = <
 &kp LG(LS(S))  &kp C_VOL_UP  &kp K_NEXT  &to 1
 &kp LG(X)      &kp C_VOL_DN  &kp C_PP    &kp LG(D)
-&kp F11        &kp K_MUTE    &kp K_PREV  &kp LG(A)
+&kp F11        &kp C_MUTE    &kp K_PREV  &kp LG(A)
             >;
         };
 
         num_layer {
             bindings = <
-&trans    &kp N7  &kp N8  &kp N9
-&trans    &kp N4  &kp N5  &kp N6
-&lt 3 N0  &kp N1  &kp N2  &kp N3
+&kp N9  &kp N6  &kp N3  &lt 2 ENTER
+&kp N8  &kp N5  &kp N2  &kp DOT
+&kp N7  &kp N4  &kp N1  &lt 0 N0
             >;
         };
 
@@ -36,19 +54,11 @@
             >;
         };
 
-        raise_layer {
+        layer_3 {
             bindings = <
-&kp 0x68  &kp 0x69  &kp 0x6A  &kp 0x6B
-&kp 0x6C  &kp 0x6D  &kp 0x6E  &kp 0x6F
-&trans    &kp 0x70  &kp 0x71  &kp 0x72
-            >;
-        };
-
-        layer_4 {
-            bindings = <
-&trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans
+&trans           &trans  &trans  &trans
+&AutoCAD_Circle  &trans  &trans  &trans
+&AutoCAD_Line    &trans  &trans  &trans
             >;
         };
     };
