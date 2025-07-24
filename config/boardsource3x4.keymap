@@ -14,9 +14,9 @@
 
         default_layer {
             bindings = <
-&tog 1  &kp C_PREV    &kp C_PP  &to 1
-&mo 2   &kp C_VOL_DN  &kp UP    &kp C_VOL_UP
-&mo 3   &kp LEFT      &kp DOWN  &kp RIGHT
+&kp LG(LS(S))  &kp C_VOL_UP  &kp K_NEXT  &to 1
+&kp LG(X)      &kp C_VOL_DN  &kp C_PP    &kp LG(D)
+&kp F11        &kp K_MUTE    &kp K_PREV  &kp LG(A)
             >;
         };
 
@@ -41,6 +41,14 @@
 &kp 0x68  &kp 0x69  &kp 0x6A  &kp 0x6B
 &kp 0x6C  &kp 0x6D  &kp 0x6E  &kp 0x6F
 &trans    &kp 0x70  &kp 0x71  &kp 0x72
+            >;
+        };
+
+        layer_4 {
+            bindings = <
+&trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans
             >;
         };
     };
