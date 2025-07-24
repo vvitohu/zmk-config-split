@@ -38,9 +38,17 @@
             >;
         };
 
+        AutoCAD {
+            bindings = <
+&trans           &trans  &trans  &to 2
+&AutoCAD_Circle  &trans  &trans  &trans
+&AutoCAD_Line    &trans  &trans  &to 0
+            >;
+        };
+
         num_layer {
             bindings = <
-&kp N9  &kp N6  &kp N3  &lt 2 ENTER
+&kp N9  &kp N6  &kp N3  &lt 1 ENTER
 &kp N8  &kp N5  &kp N2  &kp DOT
 &kp N7  &kp N4  &kp N1  &lt 0 N0
             >;
@@ -51,14 +59,6 @@
 &bt BT_CLR  &none         &sys_reset    &bootloader
 &trans      &bt BT_SEL 3  &bt BT_SEL 4  &none
 &none       &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2
-            >;
-        };
-
-        layer_3 {
-            bindings = <
-&trans           &trans  &trans  &trans
-&AutoCAD_Circle  &trans  &trans  &trans
-&AutoCAD_Line    &trans  &trans  &trans
             >;
         };
     };
