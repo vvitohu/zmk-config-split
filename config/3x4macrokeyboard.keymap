@@ -54,21 +54,21 @@
         To_Onshape: To_Onshape {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&to 1 &bl BL_ON &bl BL_SET 40>;
+            bindings = <&to 2 &bl BL_ON &bl BL_SET 40>;
             label = "TO_ONSHAPE";
         };
 
         To_default_layer: To_default_layer {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&to 1 &bl BL_ON &bl BL_SET 40>;
+            bindings = <&to 0 &bl BL_ON &bl BL_SET 40>;
             label = "TO_DEFAULT_LAYER";
         };
 
         To_num_layer: To_num_layer {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&to 1 &bl BL_ON &bl BL_SET 40>;
+            bindings = <&to 3 &bl BL_ON &bl BL_SET 40>;
             label = "TO_NUM_LAYER";
         };
 
