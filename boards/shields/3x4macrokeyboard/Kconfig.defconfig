@@ -7,10 +7,10 @@ config ZMK_KEYBOARD_NAME
     default "boardsource3x4"
 
 config ZMK_SPLIT_ROLE_CENTRAL
-    default y
+    default n
 
 config ZMK_SPLIT
-    default y
+    default n
 
 # Set this to the number of peripherals your dongle will have.
 # For a unibody, this would be 1. If you have left and right halves, set it to 2, etc.
@@ -19,10 +19,47 @@ config ZMK_SPLIT_BLE_CENTRAL_PERIPHERALS
 
 # Set this to ZMK_SPLIT_BLE_CENTRAL_PERIPHERALS + your desired number of BT profiles (default is 5)
 config BT_MAX_CONN
-    default 6
+    default 3
 
 # Set this to the same number as BT_MAX_CONN
 config BT_MAX_PAIRED
-    default 6
+    default 3
     
+config PWM
+    default y
+
+config LED_PWM
+    default y
+
 endif
+
+menuconfig ZMK_BACKLIGHT
+    bool "LED backlight"
+    select LED
+
+if ZMK_BACKLIGHT
+
+config ZMK_BACKLIGHT_BRT_STEP
+    int "Brightness step in percent"
+    range 1 100
+
+config ZMK_BACKLIGHT_BRT_START
+    int "Default brightness in percent"
+    range 1 100
+
+config ZMK_BACKLIGHT_ON_START
+    bool "Default backlight state"
+
+config ZMK_BACKLIGHT_AUTO_OFF_IDLE
+    bool "Turn off backlight when keyboard goes into idle state"
+
+config ZMK_BACKLIGHT_AUTO_OFF_USB
+    bool "Turn off backlight when USB is disconnected"
+
+endif # ZMK_BACKLIGHT
+
+endmenu # Display/LED Options
+
+rsource "src/pointing/Kconfig"
+
+
