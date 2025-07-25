@@ -24,22 +24,8 @@ config BT_MAX_CONN
 # Set this to the same number as BT_MAX_CONN
 config BT_MAX_PAIRED
     default 3
+
+CONFIG_ZMK_BACKLIGHT
+    default y
     
-
 endif
-
-
-menuconfig ZMK_BACKLIGHT
-    bool "LED backlight"
-    select LED
-
-if ZMK_BACKLIGHT
-
-config PWM
-    default y
-
-config LED_PWM
-    default y
-
-endif # ZMK_BACKLIGHT
-
