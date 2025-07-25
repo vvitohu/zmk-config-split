@@ -25,7 +25,6 @@ config BT_MAX_CONN
 config BT_MAX_PAIRED
     default 3
     
-    default y
 
 endif
 
