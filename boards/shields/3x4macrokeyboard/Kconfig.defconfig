@@ -25,13 +25,13 @@ config BT_MAX_CONN
 config BT_MAX_PAIRED
     default 3
     
-config PWM
-    default y
-
-config LED_PWM
     default y
 
 endif
+
+menu "Display/LED Options"
+
+rsource "src/display/Kconfig"
 
 menuconfig ZMK_BACKLIGHT
     bool "LED backlight"
