@@ -29,9 +29,6 @@ config BT_MAX_PAIRED
 
 endif
 
-menu "Display/LED Options"
-
-rsource "src/display/Kconfig"
 
 menuconfig ZMK_BACKLIGHT
     bool "LED backlight"
@@ -57,9 +54,4 @@ config ZMK_BACKLIGHT_AUTO_OFF_USB
     bool "Turn off backlight when USB is disconnected"
 
 endif # ZMK_BACKLIGHT
-
-endmenu # Display/LED Options
-
-rsource "src/pointing/Kconfig"
-
 
