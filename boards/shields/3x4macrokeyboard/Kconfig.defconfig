@@ -26,6 +26,31 @@ config BT_MAX_PAIRED
     default 3
 
 CONFIG_ZMK_BACKLIGHT=y
+
+config ZMK_SLEEP
+    default y
     
+config ZMK_IDLE_SLEEP_TIMEOUT
+    default 900000
     
+config ZMK_EXT_POWER
+    default y
+
+config ZMK_BATTERY_REPORTING
+    default y
+
+config ZMK_BATTERY_REPORT_INTERVAL
+    default 60
+
+if ZMK_DISPLAY
+
+config I2C
+    default y
+
+config SSD1306
+    default y
+    
+endif # ZMK_DISPLAY 
+          
 endif
+
