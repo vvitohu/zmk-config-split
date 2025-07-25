@@ -30,10 +30,15 @@
             , <&pro_micro 6 GPIO_ACTIVE_HIGH>
             ;
     };
+    aliases {
+        led-red = &led0;
+    };
+
     leds {
         compatible = "gpio-leds";
-            led_0 {
-                 gpios = <&gpio0 17 GPIO_ACTIVE_HIGH>;
-             };
-     };
+        status = "okay";
+        led0: led_0 {
+            gpios = <&gpio0 26 GPIO_ACTIVE_LOW>;  // red LED, connected to P0.26
+        };
+    };
 };
