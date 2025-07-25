@@ -137,9 +137,9 @@
 
         default_layer {
             bindings = <
-&kt LG(LS(S))  &kp C_VOL_UP  &kp K_NEXT  &To_AutoCAD
+&kt LG(LS(S))  &kp C_VOL_UP  &kp C_NEXT  &To_AutoCAD
 &kp LG(X)      &kp C_VOL_DN  &kp C_PP    &kp LG(D)
-&kp F11        &kp C_MUTE    &kp K_PREV  &kp LG(A)
+&kp F11        &kp C_MUTE    &kp C_PREV  &kp LG(A)
             >;
         };
 
