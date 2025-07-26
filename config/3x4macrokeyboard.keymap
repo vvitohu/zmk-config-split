@@ -146,9 +146,9 @@
 
         AutoCAD {
             bindings = <
-&AutpCAD_DIM   &AutoCAD_Rectang  &none             &To_num_layer
-&AutoCAD_TRIM  &AutoCAD_Circle   &none             &none
-&kp ESC        &AutoCAD_Line     &ext_power EP_ON  &To_default_layer
+&AutpCAD_DIM   &AutoCAD_Rectang  &none              &To_num_layer
+&AutoCAD_TRIM  &AutoCAD_Circle   &none              &none
+&kp ESC        &AutoCAD_Line     &ext_power EP_TOG  &To_default_layer
             >;
         };
 
