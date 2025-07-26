@@ -30,8 +30,7 @@
         ScreenCapture: ScreenCapture {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kt LS(LG(S)) &sl 6>, <&macro_press>;
-
+            bindings = <&kp LS(LG(S)) &sl 6>;
             label = "SCREENCAPTURE";
         };
 
