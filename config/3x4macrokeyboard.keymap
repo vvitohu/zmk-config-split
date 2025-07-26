@@ -92,7 +92,7 @@
         Backspace {
             bindings = <&kp BACKSPACE>;
             key-positions = <3 7>;
-            layers = <3>;
+            layers = <3 5>;
         };
 
         Bluetooth_Setting {
