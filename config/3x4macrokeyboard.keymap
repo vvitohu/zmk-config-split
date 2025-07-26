@@ -5,10 +5,10 @@
  */
 
 #include <behaviors.dtsi>
-#include <dt-bindings/zmk/backlight.h>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/outputs.h>
+#include <dt-bindings/zmk/rgb.h>
 
 / {
     macros {
@@ -47,28 +47,28 @@
         To_AutoCAD: To_AutoCAD {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&to 1 &bl BL_ON &bl BL_SET 40>;
+            bindings = <&to 1 &rgb_ug RGB_ON>;
             label = "TO_AUTOCAD";
         };
 
         To_Onshape: To_Onshape {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&to 2 &bl BL_ON &bl BL_SET 40>;
+            bindings = <&to 2 &rgb_ug RGB_ON &rgb_ug RGB_SPD>;
             label = "TO_ONSHAPE";
         };
 
         To_default_layer: To_default_layer {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&to 0 &bl BL_ON &bl BL_SET 40>;
+            bindings = <&to 0 &rgb_ug RGB_EFR &rgb_ug RGB_OFF>;
             label = "TO_DEFAULT_LAYER";
         };
 
         To_num_layer: To_num_layer {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&to 3 &bl BL_ON &bl BL_SET 40>;
+            bindings = <&to 3 &rgb_ug RGB_BRD>;
             label = "TO_NUM_LAYER";
         };
 
@@ -91,7 +91,7 @@
         To_AutoCAD_num: To_AutoCAD_num {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp RET &To_AutoCAD>;
+            bindings = <&kp RET &To_AutoCAD &rgb_ug RGB_EFR>;
             label = "TO_AUTOCAD_NUM";
         };
     };
