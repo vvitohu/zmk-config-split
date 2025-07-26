@@ -54,7 +54,7 @@
         To_Onshape: To_Onshape {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&to 2 &rgb_ug RGB_ON &rgb_ug RGB_SPD>;
+            bindings = <&to 2 &rgb_ug RGB_ON &rgb_ug RGB_EFF>;
             label = "TO_ONSHAPE";
         };
 
