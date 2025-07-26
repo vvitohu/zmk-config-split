@@ -51,6 +51,9 @@ config SSD1306
     default y
     
 endif # ZMK_DISPLAY 
-          
+
+config RGBLED_WIDGET_LAYER_BLINK_MS
+    default 100
+
 endif
 
