@@ -61,7 +61,7 @@
         To_AutoCAD_num: To_AutoCAD_num {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp RET &to 1>;
+            bindings = <&kp RET &to 2>;
             label = "TO_AUTOCAD_NUM";
         };
 
@@ -84,13 +84,13 @@
         compatible = "zmk,combos";
 
         AutoCAD {
-            bindings = <&to 1>;
+            bindings = <&to 2>;
             key-positions = <3 4>;
             layers = <0>;
         };
 
         Onshape {
-            bindings = <&to 2>;
+            bindings = <&to 4>;
             key-positions = <3 8>;
             layers = <0>;
         };
@@ -98,11 +98,11 @@
         Backspace {
             bindings = <&kp BACKSPACE>;
             key-positions = <3 7>;
-            layers = <3 5>;
+            layers = <3 1>;
         };
 
         Bluetooth_Setting {
-            bindings = <&to 4>;
+            bindings = <&to 5>;
             key-positions = <3 9>;
             layers = <0>;
         };
@@ -110,13 +110,13 @@
         Keyboard_Reset_Behavior {
             bindings = <&bootloader>;
             key-positions = <7 3>;
-            layers = <4>;
+            layers = <5>;
         };
 
         BT_Clear_profile {
             bindings = <&bt BT_CLR>;
             key-positions = <3 10>;
-            layers = <4>;
+            layers = <5>;
         };
     };
 
@@ -133,9 +133,17 @@
 
         default_layer {
             bindings = <
-&ScreenCapture  &kp C_VOL_UP  &kp C_NEXT  &to 5
+&ScreenCapture  &kp C_VOL_UP  &kp C_NEXT  &to 1
 &Win_X          &kp C_VOL_DN  &kp C_PP    &kp LG(D)
 &kp F11         &kp C_MUTE    &kp C_PREV  &kp LG(A)
+            >;
+        };
+
+        num_layer {
+            bindings = <
+&kp N9  &kp N6  &kp N3  &To_default_layer_num
+&kp N8  &kp N5  &kp N2  &kp DOT
+&kp N7  &kp N4  &kp N1  &kp N0
             >;
         };
 
@@ -147,14 +155,6 @@
             >;
         };
 
-        Onshape {
-            bindings = <
-&kp LS(S)  &kp G  &kp V  &to 0
-&kp D      &kp C  &kp H  &kp E
-&kp ESC    &kp L  &kp A  &kp I
-            >;
-        };
-
         num_layer_AutoCAD {
             bindings = <
 &kp N9  &kp N6  &kp N3  &To_AutoCAD_num
@@ -163,19 +163,19 @@
             >;
         };
 
+        Onshape {
+            bindings = <
+&kp LS(S)  &kp G  &kp V  &to 0
+&kp D      &kp C  &kp H  &kp E
+&kp ESC    &kp L  &kp A  &kp I
+            >;
+        };
+
         Bluetooth_Setting {
             bindings = <
 &bt BT_SEL 2  &bt BT_DISC 2  &out OUT_BLE  &to 0
 &bt BT_SEL 1  &bt BT_DISC 1  &out OUT_USB  &none
 &bt BT_SEL 0  &bt BT_DISC 0  &none         &sys_reset
-            >;
-        };
-
-        num_layer {
-            bindings = <
-&kp N9  &kp N6  &kp N3  &To_default_layer_num
-&kp N8  &kp N5  &kp N2  &kp DOT
-&kp N7  &kp N4  &kp N1  &kp N0
             >;
         };
 
