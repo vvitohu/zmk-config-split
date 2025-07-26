@@ -78,13 +78,13 @@
         compatible = "zmk,combos";
 
         AutoCAD {
-            bindings = <&To_AutoCAD>;
+            bindings = <&to 1>;
             key-positions = <3 4>;
             layers = <0>;
         };
 
         Onshape {
-            bindings = <&To_Onshape>;
+            bindings = <&to 2>;
             key-positions = <3 8>;
             layers = <0>;
         };
