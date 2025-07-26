@@ -61,7 +61,7 @@
         To_default_layer: To_default_layer {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&to 0 &rgb_ug RGB_EFR &rgb_ug RGB_OFF>;
+            bindings = <&to 0 &rgb_ug RGB_EFR>;
             label = "TO_DEFAULT_LAYER";
         };
 
@@ -91,7 +91,7 @@
         To_AutoCAD_num: To_AutoCAD_num {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp RET &To_AutoCAD &rgb_ug RGB_EFR>;
+            bindings = <&kp RET &To_AutoCAD>;
             label = "TO_AUTOCAD_NUM";
         };
     };
@@ -137,41 +137,41 @@
 
         default_layer {
             bindings = <
-            &kp LS(LG(S))  &kp C_VOL_UP  &kp C_NEXT  &To_AutoCAD
-            &kp LG(X)      &kp C_VOL_DN  &kp C_PP    &kp LG(D)
-            &kp F11        &kp C_MUTE    &kp C_PREV  &kp LG(A)
+&kp LS(LG(S))  &kp C_VOL_UP  &kp C_NEXT  &To_AutoCAD
+&kp LG(X)      &kp C_VOL_DN  &kp C_PP    &kp LG(D)
+&kp F11        &kp C_MUTE    &kp C_PREV  &kp LG(A)
             >;
         };
 
         AutoCAD {
             bindings = <
-            &AutpCAD_DIM   &AutoCAD_Rectang  &none  &To_num_layer
-            &AutoCAD_TRIM  &AutoCAD_Circle   &none  &none
-            &kp ESC        &AutoCAD_Line     &none  &To_default_layer
+&AutpCAD_DIM   &AutoCAD_Rectang  &none  &To_num_layer
+&AutoCAD_TRIM  &AutoCAD_Circle   &none  &none
+&kp ESC        &AutoCAD_Line     &none  &To_default_layer
             >;
         };
 
         Onshape {
             bindings = <
-            &kp LS(S)  &kp G  &kp V  &To_default_layer
-            &kp D      &kp C  &kp H  &kp E
-            &kp ESC    &kp L  &kp A  &kp I
+&kp LS(S)  &kp G  &kp V  &To_default_layer
+&kp D      &kp C  &kp H  &kp E
+&kp ESC    &kp L  &kp A  &kp I
             >;
         };
 
         num_layer {
             bindings = <
-            &kp N9  &kp N6  &kp N3  &To_AutoCAD_num
-            &kp N8  &kp N5  &kp N2  &kp DOT
-            &kp N7  &kp N4  &kp N1  &kp N0
+&kp N9  &kp N6  &kp N3  &To_AutoCAD_num
+&kp N8  &kp N5  &kp N2  &kp DOT
+&kp N7  &kp N4  &kp N1  &kp N0
             >;
         };
 
         Bluetooth_Setting {
             bindings = <
-            &bt BT_SEL 2  &bt BT_DISC 2  &out OUT_BLE  &To_default_layer
-            &bt BT_SEL 1  &bt BT_DISC 1  &out OUT_USB  &bootloader
-            &bt BT_SEL 0  &bt BT_DISC 0  &bt BT_CLR    &sys_reset
+&bt BT_SEL 2  &bt BT_DISC 2  &out OUT_BLE  &To_default_layer
+&bt BT_SEL 1  &bt BT_DISC 1  &out OUT_USB  &bootloader
+&bt BT_SEL 0  &bt BT_DISC 0  &bt BT_CLR    &sys_reset
             >;
         };
     };
