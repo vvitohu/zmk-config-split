@@ -3,7 +3,7 @@
 / {
     macropad_physical_layout: macropad_physical_layout {
         compatible = "zmk,physical-layout";
-        display-name = "boardsource3x4";
+        display-name = "3x4macrokeyboard";
         transform = <&default_transform>;
         kscan = <&kscan0>;
         keys  //                     w   h    x    y     rot    rx    ry
