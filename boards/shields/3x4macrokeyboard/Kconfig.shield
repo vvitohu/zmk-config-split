@@ -1,5 +1,5 @@
 # Copyright (c) 2020 The ZMK Contributors
 # SPDX-License-Identifier: MIT
 
-config SHIELD_BOARDSOURCE3X4
+config SHIELD_3X4MACROKEYBOARD
     def_bool $(shields_list_contains,3x4macrokeyboard)
