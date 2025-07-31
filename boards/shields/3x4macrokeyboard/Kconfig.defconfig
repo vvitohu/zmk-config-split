@@ -25,6 +25,8 @@ config BT_MAX_CONN
 config BT_MAX_PAIRED
     default 3
 
+CONFIG_CLOCK_CONTROL_NRF_K32SRC_RC=y
+
 CONFIG_ZMK_BACKLIGHT=y
 
 config ZMK_SLEEP
@@ -56,4 +58,10 @@ config RGBLED_WIDGET_LAYER_BLINK_MS
     default 100
 
 endif
+
+CONFIG_ZMK_SLEEP
+    default y
+
+CONFIG_ZMK_PM_SOFT_OFF
+    default y
 
