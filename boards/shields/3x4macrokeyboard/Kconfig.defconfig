@@ -59,9 +59,5 @@ config RGBLED_WIDGET_LAYER_BLINK_MS
 
 endif
 
-CONFIG_ZMK_SLEEP
-    default y
 
-CONFIG_ZMK_PM_SOFT_OFF
-    default y
 
