@@ -1,10 +1,10 @@
 # Copyright (c) 2020 The ZMK Contributors
 # SPDX-License-Identifier: MIT
 
-if SHIELD_3X4MACROKEYBOARD
+if SHIELD_MACROKEYBOARD
 
 config ZMK_KEYBOARD_NAME
-    default "3x4macrokeyboard"
+    default "macrokeyboard"
 
 config BT
     default y
