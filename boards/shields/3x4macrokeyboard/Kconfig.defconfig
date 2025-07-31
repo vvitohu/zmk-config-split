@@ -6,6 +6,12 @@ if SHIELD_BOARDSOURCE3X4
 config ZMK_KEYBOARD_NAME
     default "boardsource3x4"
 
+config BT
+    default y
+
+config ZMK_BLE
+    default y
+
 config ZMK_SPLIT_ROLE_CENTRAL
     default n
 
