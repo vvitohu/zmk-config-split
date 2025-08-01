@@ -112,6 +112,30 @@
             key-positions = <7 3>;
             layers = <5>;
         };
+
+        Reset {
+            bindings = <&sys_reset>;
+            key-positions = <3 11>;
+            layers = <0>;
+        };
+
+        BT_SEL0 {
+            bindings = <&bt BT_SEL 0>;
+            key-positions = <3 10>;
+            layers = <0>;
+        };
+
+        BT_SEL1 {
+            bindings = <&bt BT_SEL 1>;
+            key-positions = <3 6>;
+            layers = <0>;
+        };
+
+        BT_SEL2 {
+            bindings = <&bt BT_SEL 2>;
+            key-positions = <3 2>;
+            layers = <0>;
+        };
     };
 
     behaviors {
@@ -167,9 +191,9 @@
 
         Bluetooth_Setting {
             bindings = <
-&bt BT_SEL 2  &bt BT_DISC 2  &out OUT_BLE  &to 0
-&bt BT_SEL 1  &bt BT_DISC 1  &out OUT_USB  &none
-&bt BT_SEL 0  &bt BT_DISC 0  &bt BT_CLR    &sys_reset
+&none  &out OUT_BLE  &none           &to 0
+&none  &out OUT_USB  &none           &none
+&none  &bt BT_CLR    &bt BT_CLR_ALL  &none
             >;
         };
 
