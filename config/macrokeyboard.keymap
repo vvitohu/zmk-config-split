@@ -136,6 +136,18 @@
             key-positions = <3 2>;
             layers = <0>;
         };
+
+        USB {
+            bindings = <&out OUT_USB>;
+            key-positions = <3 5>;
+            layers = <0>;
+        };
+
+        BT {
+            bindings = <&out OUT_BLE>;
+            key-positions = <3 1>;
+            layers = <0>;
+        };
     };
 
     behaviors {
