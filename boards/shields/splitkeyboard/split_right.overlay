@@ -1,12 +1,33 @@
 #include "splitkeyboard.dtsi"
 
-&transform {
-    col-offset = <3>;
-};
+/{
+    &transform {
+        col-offset = <3>;
+    };
 
-&kscan {
-    col-gpios = <&pro_micro 5 GPIO_ACTIVE_HIGH>,
-                <&pro_micro 4 GPIO_ACTIVE_HIGH>,
-                <&pro_micro 3 GPIO_ACTIVE_HIGH>;
-                
+    &kscan {
+        col-gpios = <&pro_micro 5 GPIO_ACTIVE_HIGH>,
+                    <&pro_micro 4 GPIO_ACTIVE_HIGH>,
+                    <&pro_micro 3 GPIO_ACTIVE_HIGH>;
+                    
+    };
+    aliases {
+            led-red = &led0;
+            led-green = &led1;
+            led-blue = &led2;
+        };
+
+        leds {
+            compatible = "gpio-leds";
+            status = "okay";
+            led0: led_0 {
+                gpios = <&gpio0 15 GPIO_ACTIVE_HIGH>;  // red LED, connected to P0.26     
+            };
+            led1: led_1 {
+                gpios = <&gpio0 0 GPIO_ACTIVE_HIGH>;  // green LED, connected to P0.30
+            };
+            led2: led_2 {
+                gpios = <&gpio0 0 GPIO_ACTIVE_HIGH>;  // blue LED, connected to P0.06
+            };
+        };
 };
