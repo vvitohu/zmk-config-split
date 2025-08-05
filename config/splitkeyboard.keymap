@@ -11,58 +11,12 @@
 
 / {
     macros {
-        AutoCAD_Line: AutoCAD {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&macro_tap>, <&kp ESC &kp L &kp RET>;
-
-            label = "AUTOCAD";
-        };
-
-        AutoCAD_Circle: AutoCAD_Circle {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp ESC &kp C &kp RET>, <&macro_tap>;
-
-            label = "AUTOCAD_CIRCLE";
-        };
 
         ScreenCapture: ScreenCapture {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp LS(LG(S)) &sl 6>;
             label = "SCREENCAPTURE";
-        };
-
-        AutoCAD_Rectang: AutoCAD_Rectang {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp ESC &kp R &kp E &kp C &kp RET>, <&macro_tap>;
-
-            label = "AUTOCAD_RECTANG";
-        };
-
-        AutpCAD_DIM: AutpCAD_DIM {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp ESC &kp D &kp I &kp M &kp RET>, <&macro_tap>;
-
-            label = "AUTPCAD_DIM";
-        };
-
-        AutoCAD_TRIM: AutoCAD_TRIM {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp ESC &kp T &kp R &kp RET>, <&macro_tap>;
-
-            label = "AUTOCAD_TRIM";
-        };
-
-        To_AutoCAD_num: To_AutoCAD_num {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp RET &to 2>;
-            label = "TO_AUTOCAD_NUM";
         };
 
         To_default_layer_num: To_default_layer_num {
@@ -82,18 +36,6 @@
 
     combos {
         compatible = "zmk,combos";
-
-        AutoCAD {
-            bindings = <&to 2>;
-            key-positions = <3 4>;
-            layers = <0>;
-        };
-
-        Onshape {
-            bindings = <&to 4>;
-            key-positions = <3 8>;
-            layers = <0>;
-        };
 
         Backspace {
             bindings = <&kp BACKSPACE>;
@@ -138,30 +80,6 @@
 &kp N9  &kp N6  &kp N3  &To_default_layer_num
 &kp N8  &kp N5  &kp N2  &kp DOT
 &kp N7  &kp N4  &kp N1  &kp N0
-            >;
-        };
-
-        AutoCAD {
-            bindings = <
-&AutpCAD_DIM   &AutoCAD_Rectang  &none  &to 3
-&AutoCAD_TRIM  &AutoCAD_Circle   &none  &none
-&kp ESC        &AutoCAD_Line     &none  &to 0
-            >;
-        };
-
-        num_layer_AutoCAD {
-            bindings = <
-&kp N9  &kp N6  &kp N3  &To_AutoCAD_num
-&kp N8  &kp N5  &kp N2  &kp DOT
-&kp N7  &kp N4  &kp N1  &kp N0
-            >;
-        };
-
-        Onshape {
-            bindings = <
-&kp LS(S)  &kp G  &kp V  &to 0
-&kp D      &kp C  &kp H  &kp E
-&kp ESC    &kp L  &kp A  &kp I
             >;
         };
 
