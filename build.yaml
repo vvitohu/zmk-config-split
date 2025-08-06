@@ -20,7 +20,7 @@
 ---
 include:
     - board: nice_nano_v2
-      shield: split_left
+      shield: Split_left
       snippet: studio-rpc-usb-uart
     - board: nice_nano_v2
-      shield: split_right
+      shield: Split_right
