@@ -1,0 +1,10 @@
+/ {
+    Split_physical_layout0: Split_physical_layout_0 {
+        compatible = "zmk,physical-layout";
+        display-name = "Split";
+        kscan = <&kscan0>;             // 指向使用的掃描驅動器
+        transform = <&default_transform>; // 指向使用的矩陣轉換
+
+        
+    };
+};

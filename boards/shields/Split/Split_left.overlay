@@ -1,11 +1,4 @@
-#include "splitkeyboard.dtsi"
-#include <dt-bindings/zmk/matrix_transform.h>
-#include <dt-bindings/zmk/outputs.h>
-#include <dt-bindings/zmk/bt.h>
-
-    &transform {
-        col-offset = <3>;
-    };
+#include "Split.dtsi"
 
     &kscan {
         col-gpios = <&pro_micro 5 GPIO_ACTIVE_HIGH>,
@@ -13,5 +6,4 @@
                     <&pro_micro 3 GPIO_ACTIVE_HIGH>;
                     
     };
-
 
